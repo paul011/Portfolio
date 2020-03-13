@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+<title> Paul Garingan</title>
+
+
+
+</head>
+<script>
+  window.transitionToPage = function(href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function() { 
+        window.location.href = href
+    }, 500)
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    document.querySelector('body').style.opacity = 1
+
+
+    
+})
+</script>
+<script type="text/javascript">
+  var message="Right-click has been disabled";
+  function clickIE() {
+      if (document.all) {
+          (message);
+          return false;
+      }
+  }
+  function clickNS(e) {
+      if (document.layers || (document.getElementById && !document.all)) {
+          if (e.which == 2||e.which == 3) {
+              (message);
+              return false;
+          }
+      }
+  }
+  if (document.layers) {
+      document.captureEvents(Event.MOUSEDOWN);
+      document.onmousedown = clickNS;
+  } else {
+      document.onmouseup = clickNS;
+      document.oncontextmenu = clickIE;
+  }
+  document.oncontextmenu = new Function("return false");
+  document.getElementsByClassName('my-img').ondragstart = function() { return false; };
+  </script>
+
+<body>
+
+<div class ="header">  
+    
+    <h1 style="color: black;" > Paul Garingan</h1> 
+    <img src="images/icon.png" style="width: 80px; height: 80px;"  >
+    <h2 style="font-size: 30px; color: black;"> Graphic Designer</h2>
+ 
+<div class ="List">  
+     <ul style="list-style-type: none;">
+    <li> <a href="Portfolio.html" style="text-decoration: underline; "> <font color="#000000">Home </font></a></li>
+    <li><a href="logos.html" style="text-decoration: none; "><font color="#000000"> Logos</font></a></li>
+   <li> <a href="artworks.html" style="text-decoration: none; "><font color="#000000">Artworks</font></a></li>
+    <li><a href="" style="text-decoration: none; "><font color="#000000">Contact Details</font></a></li>
+    </ul>
+</div>
+</div>
+ 
+<img class="background" style="width: 1100px;"src="images/background1.png" >
+
+
+
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+
+
+.background{
+  margin-left: 16.9em;
+  float: left;
+  width: 25%;
+   height:700px;
+ 
+  position: fixed;
+  top: 0;
+}  
+body
+{  
+     background-color: white;
+     background-repeat: no-repeat;
+     background-size:cover;
+     
+}
+
+.header{
+ 
+ text-align: center;
+ font-size: 20px;
+ font-family:'Courier New', Courier, monospace;
+ background-color:#9bffea;
+ width: 20%;
+ height:150%;
+ overflow: hidden;
+ position: fixed;
+ top: 0;
+ left: 0;
+ margin: 0;
+ padding: 0;
+ display: block;
+
+}
+.List{
+ padding-top:10px;
+ font-size: 19px;
+ padding-right: 30px;
+ font-weight: bold;
+}
+li{
+ margin: 1em 0;
+}
+a {
+
+text-decoration: none; 
+ background: linear-gradient(black, black) bottom / 0 .1em no-repeat;
+ transition: 0.5s background-size;
+}
+
+a:hover {
+ background-size: 100% .1em;
+}
+
+</style>
+
+</body>
+</html>
